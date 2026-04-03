@@ -19,7 +19,7 @@ const USERS = {
     "asistent": { pass: "0000", name: "Asistent", role: "user" } // Exemplu user fără drept de editare manuală
 };
 
-const ADMINS = ["anita", "giorgiana"];
+const ADMINS = ["anita", "georgiana"];
 
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
