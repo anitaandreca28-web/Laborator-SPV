@@ -1,0 +1,34 @@
+{
+  "Bacteriologie": [
+    {
+      "id": 1775226059787,
+      "denumire": "Sulfanilic Acid",
+      "cod": "46113",
+      "lot": "L2024",
+      "data_scan": "03.04.2026",
+      "expirare": "2026-07-15",
+      "bucati": 5
+    },
+    {
+      "id": 1775226165196,
+      "denumire": "Salmonella Shigella",
+      "cod": "20688 30017230331A1 2027-01-31",
+      "lot": "30017230331A1",
+      "data_scan": "03.04.2026",
+      "expirare": "2027-01-01",
+      "bucati": 1
+    },
+    {
+      "id": 1775226995041,
+      "denumire": "inoculum",
+      "cod": "\u001d01150995906560031125072117260718102026-07-18",
+      "lot": "-",
+      "data_scan": "03.04.2026",
+      "expirare": "2026-02-02",
+      "bucati": 2
+    }
+  ],
+  "Biochimie": [],
+  "Hematologie": [],
+  "Consumabile ": []
+}
