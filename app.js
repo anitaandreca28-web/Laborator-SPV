@@ -3,7 +3,7 @@ const url = require('url');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001; // Adaptat pentru Render
 const DB_FILE = './baza_date_laborator.json';
 const SIGLA_FILE = './sigla.png';
 
@@ -12,11 +12,11 @@ if (!fs.existsSync(DB_FILE)) {
     fs.writeFileSync(DB_FILE, JSON.stringify({ "Bacteriologie": [] }, null, 2));
 }
 
-// Configurare Utilizatori
+// Configurare Utilizatori - AM MODIFICAT IN GEORGIANA
 const USERS = {
     "anita": { pass: "1234", name: "Anita", role: "admin" },
     "georgiana": { pass: "5678", name: "Georgiana", role: "admin" },
-    "asistent": { pass: "0000", name: "Asistent", role: "user" } // Exemplu user fără drept de editare manuală
+    "asistent": { pass: "0000", name: "Asistent", role: "user" }
 };
 
 const ADMINS = ["anita", "georgiana"];
@@ -155,7 +155,7 @@ const server = http.createServer((req, res) => {
             <h3 style="margin:0; color:var(--p-dark);">Gestiune SPV</h3>
             <select id="u-sel">
                 <option value="anita">Anita (Admin)</option>
-                <option value="giorgiana">Giorgiana (Admin)</option>
+                <option value="georgiana">Georgiana (Admin)</option>
                 <option value="asistent">Asistent</option>
             </select>
             <input type="password" id="p-inp" placeholder="Parolă">
@@ -251,11 +251,10 @@ const server = http.createServer((req, res) => {
         function doLogout() { localStorage.clear(); location.reload(); }
         if(localStorage.getItem('lab_log_spv')) document.getElementById('login-screen').style.display='none';
 
-        // --- EDITARE DOAR PENTRU ADMIN ---
         function ed(id, camp, v) {
             const user = localStorage.getItem('lab_user_key');
             if(!ADMINS.includes(user)) {
-                alert("Doar Admin (Anita/Giorgiana) poate modifica manual datele!");
+                alert("Doar Admin (Anita/Georgiana) poate modifica manual datele!");
                 return;
             }
             let n = prompt("Modifică " + camp.toUpperCase(), v);
@@ -321,4 +320,4 @@ const server = http.createServer((req, res) => {
     `);
 });
 
-server.listen(PORT, () => console.log(`Aplicația Laborator SPV rulează la http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`Aplicația rulează pe portul \${PORT}`));
