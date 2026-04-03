@@ -1,7 +1,15 @@
 {
   "name": "laborator-spv",
   "version": "1.0.0",
-  "description": "Gestiune Laborator",
+  "description": "Sistem Gestiune Stocuri Laborator",
   "main": "app.js",
   "scripts": {
-    "start": "node app.
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
