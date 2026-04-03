@@ -830,3 +830,18 @@
     "xlsx": "^0.18.5"
   }
 }
+{
+  "name": "laborator-spv",
+  "version": "1.0.0",
+  "description": "Sistem Gestiune Stocuri Laborator",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
