@@ -15,7 +15,7 @@ if (!fs.existsSync(DB_FILE)) {
 // Configurare Utilizatori
 const USERS = {
     "anita": { pass: "1234", name: "Anita", role: "admin" },
-    "giorgiana": { pass: "5678", name: "Georgiana", role: "admin" },
+    "georgiana": { pass: "5678", name: "Georgiana", role: "admin" },
     "asistent": { pass: "0000", name: "Asistent", role: "user" } // Exemplu user fără drept de editare manuală
 };
 
